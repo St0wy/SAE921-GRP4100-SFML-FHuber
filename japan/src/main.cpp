@@ -1,6 +1,3 @@
-#include <iostream>
-
-#include "SFML/Main.hpp"
 #include "SFML/Graphics.hpp"
 
 constexpr int WINDOW_WIDTH = 900;
@@ -25,7 +22,7 @@ int main()
     {
         // on inspecte tous les évènements de la fenêtre qui ont été émis depuis
         // la précédente itération
-        sf::Event event;
+        sf::Event event{};
 
         while (window.pollEvent(event))
         {
@@ -44,7 +41,7 @@ int main()
         window.clear(sf::Color::White);
 
         //window.draw(something to draw);
-        sf::Vector2f center_window(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+        sf::Vector2f center_window(WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f);
 
         // Create the red circle in the center
         sf::CircleShape center_circle;
@@ -68,8 +65,8 @@ int main()
             // Create the stripe
             sf::VertexArray stripe(sf::Triangles, 3);
             stripe[0].position = sf::Vector2f(0, 0);
-            stripe[1].position = sf::Vector2f(-STIPES_WIDTH, -WINDOW_HEIGHT / 2 - STRIPES_DISTANCE);
-            stripe[2].position = sf::Vector2f(STIPES_WIDTH, -WINDOW_HEIGHT / 2 - STRIPES_DISTANCE);
+            stripe[1].position = sf::Vector2f(-STIPES_WIDTH, -WINDOW_HEIGHT / 2.0f - STRIPES_DISTANCE);
+            stripe[2].position = sf::Vector2f(STIPES_WIDTH, -WINDOW_HEIGHT / 2.0f - STRIPES_DISTANCE);
             stripe[0].color = sf::Color::Red;
             stripe[1].color = sf::Color::Red;
             stripe[2].color = sf::Color::Red;

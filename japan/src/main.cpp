@@ -74,7 +74,7 @@ int main()
 
             // Create the rotation and multiplies it to the movement to the origin
             sf::Transform rotation;
-            rotation.rotate(i * ROTATION_ANGLE);
+            rotation.rotate(static_cast<float>(i) * ROTATION_ANGLE);
             transforms.push_back(move_to_origin * rotation);
         }
 

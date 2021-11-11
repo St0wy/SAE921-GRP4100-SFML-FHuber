@@ -8,3 +8,6 @@ project ("Formative10")
 # Include sub-projects.
 set(EXECUTABLE_CUSTOM_NAME "japan")
 add_subdirectory ("japan")
+
+set(EXECUTABLE_CUSTOM_NAME "mondrian-picture")
+add_subdirectory ("mondrianPicture")

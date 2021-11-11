@@ -1,11 +1,10 @@
-# CMakeList.txt : fichier projet CMake de niveau supérieur, effectuez une configuration globale
-# et incluez les sous-projets ici.
+﻿# CMakeList.txt : Top-level CMake project file, do global configuration
+# and include sub-projects here.
 #
 cmake_minimum_required (VERSION 3.8)
 
-# Solution
-project ("formative10Flags")
+project ("Formative10")
 
-# Each sub-project
+# Include sub-projects.
 set(EXECUTABLE_CUSTOM_NAME "japan")
 add_subdirectory ("japan")

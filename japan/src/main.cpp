@@ -1,4 +1,4 @@
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 constexpr int WINDOW_WIDTH = 900;
 constexpr int WINDOW_HEIGHT = 600;
@@ -40,7 +40,7 @@ int main()
         // Graphical Region
         window.clear(sf::Color::White);
 
-        //window.draw(something to draw);
+        // window.draw(something to draw);
         sf::Vector2f center_window(WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT / 2.0f);
 
         // Create the red circle in the center
